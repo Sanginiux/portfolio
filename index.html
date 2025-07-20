@@ -106,19 +106,20 @@
       padding: 20px;
       font-weight: 500;
          }
- .certificate-img {
-  width: 220px;
-  height: auto;
-  margin: 0 12px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
 
 .certificate-scroll-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.certificate-img {
+  width: 220px;
+  height: auto;
+  margin: 0 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .certificate-scroll-container {
@@ -190,16 +191,12 @@
 
  <section id="certificates">
   <h2 class="section-heading">Certificates</h2>
-  <div class="certificate-scroll-wrapper">
-    <button class="scroll-btn" onclick="scrollCertificates(-1)">&#8592;</button>
-    <div class="certificate-scroll-container" id="certificateScroll">
-      <img src="images/c1.jpg" alt="Foundation of Cybersecurity" class="certificate-img">
-      <img src="images/c2.jpg" alt="Play it safe:Manage security risk" class="certificate-img">
-      <img src="images/c3.jpg" alt="Connect and Protect" class="certificate-img">
-      <img src="images/c4.jpg" alt="Tools of the Trade:Linux and SQL" class="certificate-img">
-      <img src="images/c5.jpg" alt="Assests, threats , vulnerablities" class="certificate-img">
-    </div>
-    <button class="scroll-btn" onclick="scrollCertificates(1)">&#8594;</button>
+  <div class="certificate-scroll-container">
+    <img src="images/c1.jpg" alt="Foundation of Cybersecurity" class="certificate-img">
+    <img src="images/c2.jpg" alt="Play it safe:Manage security risk" class="certificate-img">
+    <img src="images/c3.jpg" alt="Connect and Protect" class="certificate-img">
+    <img src="images/c4.jpg" alt="Tools of the Trade:Linux and SQL" class="certificate-img">
+    <img src="images/c5.jpg" alt="Assests, threats , vulnerablities" class="certificate-img">
   </div>
 </section>
 
