@@ -106,32 +106,45 @@
       padding: 20px;
       font-weight: 500;
          }
-  .certificate-img {
-  width: 120px !important;
+ .certificate-img {
+  width: 220px;
   height: auto;
   margin: 0 12px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.marquee {
-  width: 100%;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  margin: 0 auto;
-}
-
-.marquee-content {
+.certificate-scroll-wrapper {
   display: flex;
-  gap: 10px;
-  animation: scroll-left 16s linear infinite;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.certificate-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 70vw;
+  padding: 10px 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.scroll-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.scroll-btn:hover {
+  background: #444;
 }
   </style>
 </head>
@@ -177,14 +190,16 @@
 
  <section id="certificates">
   <h2 class="section-heading">Certificates</h2>
-  <div class="marquee">
-    <div class="marquee-content">
+  <div class="certificate-scroll-wrapper">
+    <button class="scroll-btn" onclick="scrollCertificates(-1)">&#8592;</button>
+    <div class="certificate-scroll-container" id="certificateScroll">
       <img src="images/c1.jpg" alt="Foundation of Cybersecurity" class="certificate-img">
       <img src="images/c2.jpg" alt="Play it safe:Manage security risk" class="certificate-img">
       <img src="images/c3.jpg" alt="Connect and Protect" class="certificate-img">
       <img src="images/c4.jpg" alt="Tools of the Trade:Linux and SQL" class="certificate-img">
       <img src="images/c5.jpg" alt="Assests, threats , vulnerablities" class="certificate-img">
     </div>
+    <button class="scroll-btn" onclick="scrollCertificates(1)">&#8594;</button>
   </div>
 </section>
 
