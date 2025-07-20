@@ -105,6 +105,34 @@
       background-color: #d8c0ae;
       padding: 20px;
       font-weight: 500;
+      .certificate-img {
+  width: 120px;   /* Adjust as needed */
+  height: auto;
+  margin: 0 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin: 0 auto;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 10px;
+  animation: scroll-left 16s linear infinite;
+  /* Duplicate images for seamless looping: */
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
     }
   </style>
 </head>
@@ -148,17 +176,18 @@
     <p><strong>Price Comparison Tool:</strong> A web app that compares product prices across major e-commerce platforms to help users make smart buying decisions. <a href="https://github.com/Sanginiux/price-compare" target="_blank">View GitHub</a></p>
   </section>
 
-  <section id="certificates">
-    <h2 class="section-heading">Certificates</h2>
-    
-      <img src="images/c1.jpg" alt="Foundation of Cybersecurity">
-      <img src="images/c2.jpg" alt="Play it safe:Manage security risk">
-      <img src="images/c3.jpg" alt="Connect and Protect">
-      <img src="images/c4.jpg" alt="Tools of the Trade:Linux and SQL">
-      <img src="images/c5.jpg" alt="Assests, threats , vulnerablities">
-      
-    
-  </section>
+ <section id="certificates">
+  <h2 class="section-heading">Certificates</h2>
+  <div class="marquee">
+    <div class="marquee-content">
+      <img src="images/c1.jpg" alt="Foundation of Cybersecurity" class="certificate-img">
+      <img src="images/c2.jpg" alt="Play it safe:Manage security risk" class="certificate-img">
+      <img src="images/c3.jpg" alt="Connect and Protect" class="certificate-img">
+      <img src="images/c4.jpg" alt="Tools of the Trade:Linux and SQL" class="certificate-img">
+      <img src="images/c5.jpg" alt="Assests, threats , vulnerablities" class="certificate-img">
+    </div>
+  </div>
+</section>
 
 
   <section id="education">
